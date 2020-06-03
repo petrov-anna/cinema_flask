@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create new film
+{% endblock %}
+
+{% block content_title %}
+    <p>
+        Новый фильм
+    </p>
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-6">
+
+        <p action="{{ url_for('posts.create_post') }}" method="POST">
+
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label(class='control-label') }}
+                {{ field(class='form-control') }}
+            </div>
+        {% endfor %}
+
+        <p><button type="submit" class="btn btn-info">Добавить</button></p>
+
+    </form>
+
+    </div>
+
+{% endblock %}

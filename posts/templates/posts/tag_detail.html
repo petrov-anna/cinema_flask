@@ -1,0 +1,259 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ tag.name }} posts
+{% endblock %}
+
+{% block content_title %}
+    Список кинотеатров
+{% endblock %}
+
+{% block content %}
+    <style>
+        body { background: url(https://365psd.ru/images/backgrounds/bg-lightl-901.jpg); }
+    </style>
+    {% for post in posts %}
+        <div class="post">
+            <font size="5"><a href="{{ url_for('posts.post_detail', slug=post.slug) }}">{{ post.title }}</a></font>
+        </div>
+
+        {% if post.id==15 %}
+            <p>
+                <div class="a-event-i">
+                    <div class="a-event-header ">
+                        <div class="event-header-i">
+                            <a title="4 июня, четверг" class="header__link">4 июня, четверг</a>
+                        </div>
+                    </div>
+                    <div class="a-event-list js-film-list-wrapper">
+                        <div class="event-list-i">
+                            <div class="a-event-item js-film-list" data-premiere="0" data-kids="0">
+                                <div class="event-item-i js-film-list__li" itemscope="" itemtype="http://schema.org/Event">
+                                    <div class="item-header">
+                                        <div class="item-header-i">
+
+                                            <a href="https://afisha.tut.by/place/artkinoteatr/" class="header__link" title="Кинотеатр АртКинотеатр ТЦ Европа в Минске" itemprop="url">
+                                            <span itemprop="name"><font size="4,7">АртКинотеатр ТЦ Европа</font></span>
+
+                                            </a>
+                                            <a class="tooltip-holder" data-favorite-id="185580" data-favorite-type="place">
+                                                <i class="a-icon icon-favorite add-favorite "></i>
+                                            </a>
+                                            <time itemprop="startDate" datetime="2020-06-04T19:00:00+03:00"></time>
+                                            <time itemprop="startDate" datetime="2020-06-04T21:00:00+03:00"></time>
+                                            <span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                                <meta itemprop="name" content="АртКинотеатр ТЦ Европа">
+                                                <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                                    <meta itemprop="streetAddress" content="ул. Сурганова, 57Б">
+                                                    <meta itemprop="addressLocality" content="Минск">
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="event-session js-session-list-wrapper">
+                                        <div class="event-session-i js-session-list">
+                                            <ul class="b-shedule__list js-shedule-list">
+                                                <li class="shedule__li" data-hour="19" data-minute="0" data-is-tomorow="0">
+                                                    <a class="tooltip-holder event-time blue_button small js-ticket" target="_blank" data-ticket="none" data-track-click="true" data-session="1435414" data-is-multi="0" data-silverscreen="false"><font size="4,5">19:00</font></a>
+                                                </li>
+                                                <li class="shedule__li" data-hour="21" data-minute="0" data-is-tomorow="0">
+                                                    <a class="tooltip-holder event-time blue_button small js-ticket" target="_blank" data-ticket="none" data-track-click="true" data-session="1435419" data-is-multi="0" data-silverscreen="false"><font size="4,5">21:00</font></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="a-event-item js-film-list" data-premiere="0" data-kids="0">
+                                <div class="event-item-i js-film-list__li" itemscope="" itemtype="http://schema.org/Event">
+                                    <div class="item-header">
+                                        <div class="item-header-i">
+
+                                            <a href="https://afisha.tut.by/place/art-kinoteatr/" class="header__link" title="Кинотеатр АртКинотеатр ТЦ Титан в Минске" itemprop="url">
+                                                <span itemprop="name"><font size="4,7">АртКинотеатр ТЦ Титан</font></span>
+                                            </a>
+                                            <a class="tooltip-holder" data-favorite-id="117400" data-favorite-type="place">
+                                                <i class="a-icon icon-favorite add-favorite "></i>
+                                            </a>
+                                            <time itemprop="startDate" datetime="2020-06-04T20:45:00+03:00"></time>
+                                            <span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                                <meta itemprop="name" content="АртКинотеатр ТЦ Титан">
+                                                <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                                    <meta itemprop="streetAddress" content="пр-т Дзержинского, 104">
+                                                    <meta itemprop="addressLocality" content="Минск">
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="event-session js-session-list-wrapper">
+                                        <div class="event-session-i js-session-list">
+                                            <ul class="b-shedule__list js-shedule-list">
+                                                <li class="shedule__li" data-hour="20" data-minute="45" data-is-tomorow="0">
+                                                    <a class="tooltip-holder event-time blue_button small js-ticket" target="_blank" data-ticket="none" data-track-click="true" data-session="1435415" data-is-multi="0" data-silverscreen="false"><font size="4,5">20:45</font></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="a-event-item js-film-list" data-premiere="0" data-kids="0">
+                                <div class="event-item-i js-film-list__li" itemscope="" itemtype="http://schema.org/Event">
+                                    <div class="item-header">
+                                        <div class="item-header-i">
+
+                                            <a href="https://afisha.tut.by/place/belarus-kino/" class="header__link" title="Кинотеатр Беларусь в Минске" itemprop="url">
+                                                <span itemprop="name"><font size="4,7">Беларусь</font></span>
+                                            </a>
+                                            <a class="tooltip-holder" data-favorite-id="78525" data-favorite-type="place">
+                                                <i class="a-icon icon-favorite add-favorite "></i>
+                                            </a>
+                                            <time itemprop="startDate" datetime="2020-06-04T21:20:00+03:00"></time>
+                                            <span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                                <meta itemprop="name" content="Беларусь">
+                                                <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                                    <meta itemprop="streetAddress" content="ул. Романовская Слобода, 28">
+                                                    <meta itemprop="addressLocality" content="Минск">
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="event-session js-session-list-wrapper">
+                                        <div class="event-session-i js-session-list">
+                                            <ul class="b-shedule__list js-shedule-list">
+                                                <li class="shedule__li" data-hour="21" data-minute="20" data-is-tomorow="0">
+                                                    <a class="tooltip-holder event-time blue_button small js-ticket" target="_blank" data-ticket="none" data-track-click="true" data-session="1435259" data-is-multi="0" data-silverscreen="false"><font size="4,5">21:20</font></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        {% endif %}
+
+        {% if post.id==16 %}
+            <p>
+                <div class="a-event-i">
+                    <div class="a-event-header ">
+                        <div class="event-header-i">
+                            <a title="4 июня, четверг" class="header__link">4 июня, четверг</a>
+
+                        </div>
+                    </div>
+                    <div class="a-event-list js-film-list-wrapper">
+                        <div class="event-list-i">
+                            <div class="a-event-item js-film-list" data-premiere="0" data-kids="0">
+                                <div class="event-item-i js-film-list__li" itemscope="" itemtype="http://schema.org/Event">
+                                    <div class="item-header">
+                                        <div class="item-header-i">
+
+                                            <a href="https://afisha.tut.by/place/artkinoteatr/" class="header__link" title="Кинотеатр АртКинотеатр ТЦ Европа в Минске" itemprop="url">
+                                                <span itemprop="name"><font size="4,7">АртКинотеатр ТЦ Европа</font></span>
+
+                                            </a>
+                                            <a class="tooltip-holder" data-favorite-id="185580" data-favorite-type="place">
+                                                <i class="a-icon icon-favorite add-favorite "></i>
+                                            </a>
+                                            <time itemprop="startDate" datetime="2020-06-04T19:00:00+03:00"></time>
+                                            <time itemprop="startDate" datetime="2020-06-04T21:00:00+03:00"></time>
+                                            <span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                                <meta itemprop="name" content="АртКинотеатр ТЦ Европа">
+                                                <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                                    <meta itemprop="streetAddress" content="ул. Сурганова, 57Б">
+                                                    <meta itemprop="addressLocality" content="Минск">
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="event-session js-session-list-wrapper">
+                                        <div class="event-session-i js-session-list">
+                                            <ul class="b-shedule__list js-shedule-list">
+                                                <li class="shedule__li" data-hour="19" data-minute="0" data-is-tomorow="0">
+                                                    <a class="tooltip-holder event-time blue_button small js-ticket" target="_blank" data-ticket="none" data-track-click="true" data-session="1435414" data-is-multi="0" data-silverscreen="false"><font size="4,5">18:30</font></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="a-event-item js-film-list" data-premiere="0" data-kids="0">
+                                <div class="event-item-i js-film-list__li" itemscope="" itemtype="http://schema.org/Event">
+                                    <div class="item-header">
+                                        <div class="item-header-i">
+
+                                            <a href="https://afisha.tut.by/place/art-kinoteatr/" class="header__link" title="Кинотеатр АртКинотеатр ТЦ Титан в Минске" itemprop="url">
+                                                <span itemprop="name"><font size="4,7">АртКинотеатр ТЦ Титан</font></span>
+                                            </a>
+                                            <a class="tooltip-holder" data-favorite-id="117400" data-favorite-type="place">
+                                                <i class="a-icon icon-favorite add-favorite "></i>
+                                            </a>
+                                            <time itemprop="startDate" datetime="2020-06-04T20:45:00+03:00"></time>
+                                            <span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                                <meta itemprop="name" content="АртКинотеатр ТЦ Титан">
+                                                <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                                    <meta itemprop="streetAddress" content="пр-т Дзержинского, 104">
+                                                    <meta itemprop="addressLocality" content="Минск">
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="event-session js-session-list-wrapper">
+                                        <div class="event-session-i js-session-list">
+                                            <ul class="b-shedule__list js-shedule-list">
+                                                <li class="shedule__li" data-hour="20" data-minute="45" data-is-tomorow="0">
+                                                    <a class="tooltip-holder event-time blue_button small js-ticket" target="_blank" data-ticket="none" data-track-click="true" data-session="1435415" data-is-multi="0" data-silverscreen="false"><font size="4,5">18:45</font></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="a-event-item js-film-list" data-premiere="0" data-kids="0">
+                                <div class="event-item-i js-film-list__li" itemscope="" itemtype="http://schema.org/Event">
+                                    <div class="item-header">
+                                        <div class="item-header-i">
+
+                                            <a href="https://afisha.tut.by/place/belarus-kino/" class="header__link" title="Кинотеатр Беларусь в Минске" itemprop="url">
+                                                <span itemprop="name"><font size="4,7">Беларусь</font></span>
+                                            </a>
+                                            <a class="tooltip-holder" data-favorite-id="78525" data-favorite-type="place">
+                                                <i class="a-icon icon-favorite add-favorite "></i>
+                                            </a>
+                                            <time itemprop="startDate" datetime="2020-06-04T21:20:00+03:00"></time>
+                                            <span itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+                                                <meta itemprop="name" content="Беларусь">
+                                                <span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+                                                    <meta itemprop="streetAddress" content="ул. Романовская Слобода, 28">
+                                                    <meta itemprop="addressLocality" content="Минск">
+                                                </span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div class="event-session js-session-list-wrapper">
+                                        <div class="event-session-i js-session-list">
+                                            <ul class="b-shedule__list js-shedule-list">
+                                                <li class="shedule__li" data-hour="21" data-minute="20" data-is-tomorow="0">
+                                                    <a class="tooltip-holder event-time blue_button small js-ticket" target="_blank" data-ticket="none" data-track-click="true" data-session="1435259" data-is-multi="0" data-silverscreen="false"><font size="4,5">15:20</font></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

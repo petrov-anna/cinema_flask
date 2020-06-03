@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Список фильмов
+{% endblock %}
+
+{% block content_title %}
+    Список фильмов
+{% endblock %}
+
+{% block content %}
+    <style>
+        body { background: url(https://365psd.ru/images/backgrounds/bg-lightl-901.jpg); }
+    </style>
+    {% for post in pages.items %}
+        <div class="row">
+
+            <div class="col-4">
+                <p><body><p><a href="{{ url_for('posts.post_detail', slug=post.slug) }}"><img src={{ post.picture }} alt="picture" height="450"></a></p></body></p>
+            </div>
+
+            <div class="col">
+                <p>
+                    <p><font size="5"><a href="{{ url_for('posts.post_detail', slug=post.slug) }}"> {{ post.title }}</a></font></p>
+                </p>
+            </div>
+
+        </div>
+    {% endfor %}
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+
+            <li {% if not pages.has_prev %} class="page-item disabled" {% endif %} >
+                <a class="page-link" href="./?page={{ pages.prev_num }}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span></a>
+            </li>
+
+            {% for page in pages.iter_pages() %}
+                <li {% if page == pages.page %} class="page-item active" {% endif %}>
+                    <a class="page-link" href="./?page={{ page }}">{{ page }}<span class="sr-only">(current)</span></a>
+                </li>
+            {% endfor %}
+
+            <li {% if not pages.has_next %} class="page-item disabled" {% endif %} >
+                <a class="page-link" href="./?page={{ pages.next_num }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span></a>
+            </li>
+        </ul>
+    </nav>
+
+{% endblock %}

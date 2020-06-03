@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content_title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block content %}
+    <style>
+        body { background: url(https://365psd.ru/images/backgrounds/bg-lightl-901.jpg); }
+    </style>
+    <div class="tags">
+        {% for tag in tags %}
+        <p><font size="5"><a href="{{  url_for('posts.tag_detail', slug=tag.slug) }}"><span class="label label-primary">Сеансы</span></a></font></p>
+        {% endfor %}
+    </div>
+    <div class="row">
+
+        <div class="col">
+            <p><body><p><img src={{ post.picture }} alt="picture" height="600"></p></body></p>
+        </div>
+
+        <div class="col">
+            <p>
+                <div class="main-content"><strong>Страна: </strong> {{ post.country }}</div>
+                <div class="main-content"><strong>Год: </strong>{{ post.year }}</div>
+                <div class="main-content"><strong>Жанр: </strong>{{ post.genre }}</div>
+                <div class="main-content"><strong>Описание: </strong>{{ post.body }}</div>
+            </p>
+        </div>
+    </div>
+
+{% endblock %}

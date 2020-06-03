@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Edit film
+{% endblock %}
+
+{% block content_title %}
+    <p>
+        Редактировать фильм
+    </p>
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-6">
+
+        <p action="{{ url_for('posts.edit_post', slug=post.slug) }}" method="POST">
+
+        {% for field in form %}
+            <div class="form-group">
+                {{ field.label(class='control-label') }}
+                {{ field(class='form-control') }}
+            </div>
+        {% endfor %}
+
+        <p><button type="submit" class="btn btn-info">Изменить</button></p>
+
+    </form>
+
+    </div>
+
+{% endblock %}

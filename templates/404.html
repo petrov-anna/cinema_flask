@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+        Page not found (404)
+{% endblock %}
+
+{% block content_title %}
+    <p class="offset-md-3 col-md-6">
+        Page not found (404)
+    </p>
+{% endblock %}
+
+{% block content %}
+    <p class="offset-md-3 col-md-7">
+        <a class="navbar-brand" href=" {{ url_for('index') }} ">Вернуться на главную страницу</a>
+    </p>
+{% endblock %}

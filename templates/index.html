@@ -1,0 +1,76 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+    Фильмы
+{% endblock %}
+
+
+{% block content_title %}
+    Главная
+{% endblock %}
+
+
+{% block content %}
+    <div>
+        <style>
+            body { background: url(https://365psd.ru/images/backgrounds/bg-lightl-901.jpg); }
+        </style>
+        <p class="offset-md-2 col-md-7">
+            Этот сайт создан для того, чтобы посмотреть сеансы определенного фильма. В связи с пандемией и закрытием
+            кинотеатров в России, на данном сайте будет задействована информация кинотеатров г. Минск.
+            Если вы хотите посмотреть сеанс на определенный фильм, то перереходите на вкладку
+            <a class="nav-link" href=" {{ url_for('posts.index') }} ">Фильмы<span class="sr-only">(current)</span></a>
+            Ниже вы можете увидеть новые фильмы, а также рекомендованные фильмы.
+        </p>
+
+        <p><strong>Новые фильмы: </strong></p>
+        <p>
+            <div class="row">
+<!--                <div class="col">-->
+<!--                    <body><p><img src="https://www.film.ru/sites/default/files/movies/posters/44453936-1173739.jpg" alt="picture" height="300"></p>Лед 2</body>-->
+<!--                </div>-->
+
+                <div class="col">
+                    <body><p><a href="/blog/new-title"><img src="https://www.kinopoisk.ru/images/film_big/1112295.jpg" alt="picture" height="300" ></a><p><a href="/blog/new-title"> Один вдох</a></p></p></body>
+                </div>
+
+                <div class="col">
+                    <body><p><a href="/blog/--New-post"><img src="https://www.kino-teatr.ru/movie/poster/133670/97680.jpg" alt="picture" height="300"></a><p><a href="/blog/--New-post"> Калашников</a></p></p></body>
+                </div>
+
+                <div class="col">
+                    <body><p><a href="/blog/Соник-в-кино"><img src="https://www.film.ru/sites/default/files/movies/posters/24229012-1173758.jpg" alt="picture" height="300"></a><p><a href="/blog/Соник-в-кино"> Соник в кино</a></p></p></body>
+                </div>
+
+                <div class="col">
+                    <body><p><a href="/blog/7-post"><img src="https://www.kinopoisk.ru/images/film_big/1228547.jpg" alt="picture" height="300"></a><p><a href="/blog/7-post"> Марафон желаний</a></p></p></body>
+                </div>
+            </div>
+        </p>
+
+        <p><strong>Рекомендованные фильмы: </strong></p>
+        <p>
+            <div class="row">
+                <div class="col">
+                    <body><p><img src="https://upload.wikimedia.org/wikipedia/ru/8/8e/%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%8C_%D0%9B%D0%B5%D0%B2.jpg" alt="picture" height="300"></p>Король Лев</body>
+                </div>
+
+                <div class="col">
+                    <body><p><a href="/blog/7-post"><img src="https://www.kinopoisk.ru/images/film_big/1228547.jpg" alt="picture" height="300"></a><p><a href="/blog/7-post"> Марафон желаний</a></p></p></body>
+                </div>
+
+                <div class="col">
+                    <body><p><img src="https://st.kp.yandex.net/images/film_iphone/iphone360_1097848.jpg" alt="picture" height="300"></p>Запретная кухня</body>
+                </div>
+
+                <div class="col">
+                    <body><p><a href="/blog/Соник-в-кино"><img src="https://www.film.ru/sites/default/files/movies/posters/24229012-1173758.jpg" alt="picture" height="300"></a><p><a href="/blog/Соник-в-кино"> Соник в кино</a></p></p></body>
+                </div>
+
+                <div class="col">
+                    <body><p><img src="https://www.film.ru/sites/default/files/movies/posters/41020378-1131815.jpg" alt="picture" height="300"></p>Достать ножи</body>
+                </div>
+            </div>
+        </p>
+    </div>
+{% endblock %}
